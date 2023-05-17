@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPFApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy rezerwowanie.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class rezerwowanie : Window
     {
-        public MainWindow()
+        public rezerwowanie()
         {
             InitializeComponent();
         }
 
-        private void rezerwacja_click(object sender, RoutedEventArgs e)
+        private void glowna_click(object sender, RoutedEventArgs e)
         {
-           rezerwowanie objRezerwacja = new rezerwowanie();
-            objRezerwacja.Show();
+            MainWindow objGlowna = new MainWindow();
+            objGlowna.Show();
             this.Close();
         }
     }
