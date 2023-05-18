@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFApp"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Rezerwacja stolików" 
+        Title="Strona główna" 
         Height="600" Width="1000"
         WindowStartupLocation="CenterScreen" Cursor="Arrow" FontFamily="Tw Cen MT Condensed Extra Bold"    
     >

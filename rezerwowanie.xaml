@@ -9,20 +9,36 @@
         WindowStartupLocation="CenterScreen" Cursor="Arrow" FontFamily="Tw Cen MT Condensed Extra Bold"
         >
     <StackPanel>
-    <StackPanel.Background>
-        <ImageBrush ImageSource="/tlo.jpg" TileMode="None" Stretch="Fill"/>
-    </StackPanel.Background>
-        <TextBlock x:Name="danetxt" TextWrapping="Wrap" Text="Wypełnij dane" TextAlignment="Center" Foreground="White" Margin="0,30,0,0" FontSize="48" FontFamily="Tw Cen MT Condensed Extra Bold"/>
-        <Button x:Name="back" Width="150" Height="30" Content="Powrót" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,30,0" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="18" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Click="glowna_click"/>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/tlo.jpg" TileMode="None" Stretch="Fill"/>
+        </StackPanel.Background>
+        <!-- Panel górny -->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="danetxt" TextWrapping="Wrap" Text="Wypełnij dane" TextAlignment="Center" Foreground="White" FontSize="58" FontFamily="Tw Cen MT Condensed Extra Bold" VerticalAlignment="Center" Margin="350,44,0,0" Width="330"/>
+            <Button x:Name="back" Width="150" Height="30" Content="Powrót" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="22" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Click="glowna_click" Margin="120,0,0,0" Cursor="Hand"/>
+        </StackPanel>
+        <!-- Panel wprowadzania imienia -->
+        <StackPanel Margin="0,70,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Imię:" Foreground="White" FontSize="36" TextWrapping="Wrap" Margin="341,0,0,0" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Width="180" Height="35" Background="Gainsboro" TextChanged="TextBox_TextChanged0" FontSize="30" Margin="80,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="#FFD4C302"/>
+        </StackPanel>
+        <!-- Panel wprowadzania nazwiska -->
+        <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Nazwisko:" Foreground="White" FontSize="36" TextWrapping="Wrap" Margin="269,0,0,0" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Width="180" Height="35" Background="Gainsboro" TextChanged="TextBox_TextChanged1" FontSize="30" Margin="80,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="#FFD4C302"/>
+        </StackPanel>
+        <!-- Panel wyboru ilości osób -->
+        <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Liczba gości:" Foreground="White" FontSize="36" TextWrapping="Wrap" Margin="242,0,0,0" VerticalAlignment="Center"/>
+            <TextBox TextWrapping="Wrap" Width="180" Height="35" Background="Gainsboro" TextChanged="TextBox_TextChanged2" FontSize="30" Margin="80,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="#FFD4C302"/>
+        </StackPanel>
 
-
-
-
-
-
-
-
-
+        <!-- Panel wyboru daty -->
+        <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Data:" Foreground="White" FontSize="36" TextWrapping="Wrap" Margin="337,0,0,0" VerticalAlignment="Center"/>
+            <DatePicker Width="191" RenderTransformOrigin="0.48,0.311" Margin="77,0,0,0" Height="26" BorderBrush="Black" />
+        </StackPanel>
+        <Button x:Name="rez" Width="150" Height="30" Content="Rezerwuj" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="24" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Margin="0,20,0,0" Cursor="Hand"/>
 
     </StackPanel>
 </Window>

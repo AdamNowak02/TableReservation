@@ -30,5 +30,20 @@ namespace WPFApp
             objGlowna.Show();
             this.Close();
         }
+
+        private void TextBox_TextChanged0(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+        }
+
+        private void TextBox_TextChanged1(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+        }
+
+        private void TextBox_TextChanged2(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+        }
     }
 }
