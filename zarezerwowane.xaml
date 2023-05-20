@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPFApp.zarezerwowane"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp"
+        mc:Ignorable="d"
+        Title="Zarezerwowane" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen" Cursor="Arrow" FontFamily="Tw Cen MT Condensed Extra Bold"
+        >
+
+    <StackPanel Cursor="Arrow" Margin="0,0,0,-6">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/tlo.jpg" TileMode="None" Stretch="Fill"/>
+        </StackPanel.Background>
+        <!-- Panel górny -->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="rezerwacjetxt" TextWrapping="Wrap" Text="Aktualne rezerwacje" TextAlignment="Center" Foreground="White" FontSize="42" FontFamily="Tw Cen MT Condensed Extra Bold" VerticalAlignment="Center" Margin="340,80,0,0" Width="330"/>
+            <Button x:Name="powrot" Width="150" Height="30" Content="Powrót" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="22" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Click="glowna_click" Margin="120,0,0,0" Cursor="Hand"/>
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+    </StackPanel>
+</Window>
