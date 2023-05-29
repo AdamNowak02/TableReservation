@@ -11,8 +11,7 @@
         WindowStartupLocation="CenterScreen" Cursor="Arrow" FontFamily="Tw Cen MT Condensed Extra Bold"    
     >
 
-    
-    
+
     <StackPanel Cursor="Arrow" Margin="0,0,0,-6">
         <StackPanel.Background>
             <ImageBrush ImageSource="/tlo.jpg" TileMode="None" Stretch="Fill"/>

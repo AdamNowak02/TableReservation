@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,9 +16,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Path = System.IO.Path;
-using System.Data.SqlClient;
-
-
 
 namespace WPFApp
 {
@@ -40,6 +39,9 @@ namespace WPFApp
             // koniec zmiennych
             connection.Open();
 
+
+            SqlCommand zmienna = new SqlCommand("select * from Wydarzenia", connection);
+
         }
 
         private void rezerwacja_click(object sender, RoutedEventArgs e)
@@ -55,5 +57,12 @@ namespace WPFApp
             objZarezerwowane.Show();
             this.Close();
         }
+
+        
+
+
+
+
+
     }
 }
