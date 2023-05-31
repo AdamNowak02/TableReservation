@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -40,9 +41,17 @@ namespace WPFApp
             connection.Open();
 
 
-            SqlCommand zmienna = new SqlCommand("select * from Wydarzenia", connection);
 
+            //wstawianie do tabelki           
+            SqlCommand command = new SqlCommand("SELECT * FROM Wydarzenia", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            connection.Close();
+
+            tabelka.ItemsSource = dataTable.DefaultView;
         }
+
 
         private void rezerwacja_click(object sender, RoutedEventArgs e)
         {
