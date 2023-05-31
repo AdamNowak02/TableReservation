@@ -19,7 +19,7 @@
             <TextBlock x:Name="rezerwacjetxt" TextWrapping="Wrap" Text="Aktualne rezerwacje" TextAlignment="Center" Foreground="White" FontSize="42" FontFamily="Tw Cen MT Condensed Extra Bold" VerticalAlignment="Center" Margin="340,80,0,0" Width="330"/>
             <Button x:Name="powrot" Width="150" Height="30" Content="Powrót" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="22" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Click="glowna_click" Margin="120,0,0,0" Cursor="Hand"/>
         </StackPanel>
-        <DataGrid Name="rezerwacje" Margin="0,40,0,0" Height="200" Width="800" d:ItemsSource="{Binding}"/>
+        <DataGrid Name="rezerwacje" Margin="0,40,0,0" Height="330" Width="500" d:ItemsSource="{Binding}" FontSize="18"/>
 
 
 
