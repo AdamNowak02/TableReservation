@@ -42,7 +42,7 @@ namespace WPFApp
 
 
             //wstawianie do tabelki           
-            SqlCommand command = new SqlCommand("SELECT * FROM Rezerwacje", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM Rezerwacje2", connection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);

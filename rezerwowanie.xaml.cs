@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Path = System.IO.Path;
+using System.Globalization;
 
 namespace WPFApp
 {
@@ -36,28 +37,6 @@ namespace WPFApp
             SqlConnection connection = new SqlConnection(conn);
             // koniec zmiennych
             connection.Open();
-
-
-
-            /* string add_data = "INSERT into [dbo].[rezerwacje] values(@KlientID, @) ";
-             SqlCommand cmd = new SqlCommand(add_data, connection);
-
-
-             cmd.Parameters.AddWithValue("@username", username.Text);
-             cmd.Parameters.AddWithValue("@password", password.Password);
-             cmd.ExecuteNonQuery();
-             connection.Close();
-             username.Text = "";
-             password.Password = "";
-
-             MainWindow w1 = new MainWindow();
-             this.Close();
-             w1.Show(); */
-
-
-
-
-
         }
 
         private void glowna_click(object sender, RoutedEventArgs e)
@@ -92,6 +71,40 @@ namespace WPFApp
                 this.Close();
             }
 
+            string[] dataur1 = Dataa.Text.Split(".");
+            string dataur2 = dataur1[2] + "." + dataur1[1] + "." + dataur1[0];
+            DateTime dataur3 = DateTime.ParseExact(dataur2, "yyyy.MM.dd", CultureInfo.InvariantCulture);
+
+
+
+
+            string FileName = "Restauracja.mdf";
+            string CurrentDirectory = Directory.GetCurrentDirectory();
+            string ProjectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(CurrentDirectory).FullName).FullName).FullName;
+            string FilePath = Path.Combine(ProjectDirectory, FileName);
+
+            string conn = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={FilePath};Integrated Security=True;Connect Timeout=30;";
+            SqlConnection connection = new SqlConnection(conn);
+            // koniec zmiennych
+            connection.Open();
+
+
+
+            SqlCommand cmd1 = new SqlCommand("INSERT INTO Rezerwacje2 (Imie, Nazwisko, LiczbaGosci, Data) VALUES (@Imie, @Nazwisko, @LiczbaGosci)", connection);
+            cmd1.Parameters.AddWithValue("@Imie", imie.Text);
+            cmd1.Parameters.AddWithValue("@Nazwisko", nazwisko.Text);
+            cmd1.Parameters.AddWithValue("@LiczbaGosci", liczba.Text);
+            cmd1.Parameters.AddWithValue("@DataRezerwacji", dataur3);
+
+            //int a = cmd1.ExecuteNonQuery();
+ 
+            //if (a == 1)
+            //{
+                MessageBox.Show($"{imie.Text} {nazwisko.Text} pomyślnie dokonałeś rezerwacji!");
+                MainWindow okno1 = new MainWindow();
+                okno1.Show();
+                this.Close();
+            //}
         }
     }
 

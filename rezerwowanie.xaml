@@ -37,7 +37,7 @@
         <!-- Panel wyboru daty -->
         <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Left">
             <TextBlock Text="Data:" Foreground="White" FontSize="36" TextWrapping="Wrap" Margin="337,0,0,0" VerticalAlignment="Center"/>
-            <DatePicker Width="191" RenderTransformOrigin="0.48,0.311" Margin="77,0,0,0" Height="26" BorderBrush="Black" />
+            <DatePicker Name="Dataa" Width="191" RenderTransformOrigin="0.48,0.311" Margin="77,0,0,0" Height="26" BorderBrush="Black" />
         </StackPanel>
         <Button x:Name="rez" Width="150" Height="30" Content="Rezerwuj" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="24" Background="Black" Foreground="White" BorderBrush="#FFE6BD00" Margin="0,20,0,0" Cursor="Hand" Click="rez_Click"/>
 
